@@ -1,1 +1,10 @@
-<h1>smiththekid92</h1>
+<h1>GitHub - smiththekid92</h1>
+ 
+<p>
+  <%= @profile %>
+  <% @repo.each do |repo|%>
+  <li>ID: <%= repo["id"]%></li>
+  <li>Name: <%= repo["full_name"]%></li>
+    <% end %>
+</p>
+

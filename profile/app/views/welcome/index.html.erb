@@ -1,10 +1,16 @@
-<h1>GitHub - smiththekid92</h1>
- 
+<img src="<%= @profile["avatar_url"]%>" alt="profile-photo" height="250" width="250">
+<h1><%= @profile["name"]%></h1>
+<h3><%= @profile["login"]%></h3>
+<button><%= @profile["bio"]%>Add a bio</button>
+ <h2>Repos List</h2>
 <p>
-  <%= @profile %>
-  <% @repo.each do |repo|%>
-  <li>ID: <%= repo["id"]%></li>
-  <li>Name: <%= repo["full_name"]%></li>
-    <% end %>
+  <% @repo.each do |repo|%><br>
+    <br>
+    <li>ID: <%= repo["id"]%></li>
+    <li>Name: <%= repo["full_name"]%></li>
+    <li>Link: <a href="https://github.com/smiththekid92/project-w1
+  "><%= repo ["html_url"]%></a></li>
+    <li>Owner: <%= repo["owner"]%></li><br>
+    <%= @repo %>
+  <% end %>
 </p>
-

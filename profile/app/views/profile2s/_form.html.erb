@@ -1,0 +1,17 @@
+<%= form_with(model: profile2, local: true) do |form| %>
+  <% if profile2.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(profile2.errors.count, "error") %> prohibited this profile2 from being saved:</h2>
+
+      <ul>
+      <% profile2.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
